@@ -70,6 +70,7 @@
     </style>
 </head>
 <body>
+    <h1>TEST1</h1>
     <div class="block">
         <div class="left" id="left">left</div>
         <div class="cardsBlock">
@@ -132,13 +133,13 @@
             let left = parseFloat(window.getComputedStyle(cards).getPropertyValue("left"));
             let width = parseFloat(window.getComputedStyle(card).getPropertyValue("width"));
             let width2 = parseFloat(window.getComputedStyle(cards).getPropertyValue("width"));
-            if(left < width2){
-                cards.style.left = left -20 +'px';
+            if(left < (width2-width-20)){
+                cards.style.left = left -60 +'px';
             }else{
                 cards.style.left = left + 'px';
             }
         });
-        alert(parseFloat(window.getComputedStyle(cards).getPropertyValue("width")))
+        // alert(parseFloat(window.getComputedStyle(cards).getPropertyValue("width")))
         // alert(parseFloat(window.getComputedStyle(card).getPropertyValue("width")));
         // alert(parseFloat(window.getComputedStyle(cards).getPropertyValue("left")));
 
