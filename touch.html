@@ -89,6 +89,16 @@
                     <h3>Tiltle4</h3>
                     <p>2020/02/02</p>
                 </div>
+                <div class="card">
+                    <div class="img"></div>
+                    <h3>Tiltle5</h3>
+                    <p>2020/02/02</p>
+                </div>
+                <div class="card">
+                    <div class="img"></div>
+                    <h3>Tiltle6</h3>
+                    <p>2020/02/02</p>
+                </div>
             </div>
         </div>
         <div class="right" id="right">right</div>
@@ -113,7 +123,7 @@
             cards.style.left = left + width +20 +'px'; 
         })
 
-        cards.addEventListener('touchmove',function(){
+        cards.addEventListener('touchend',function(){
             let left = parseFloat(window.getComputedStyle(cards).getPropertyValue("left"));
             let width = parseFloat(window.getComputedStyle(card).getPropertyValue("width"));
             // alert(window.getComputedStyle('.cards').left);
