@@ -47,6 +47,11 @@
             flex-shrink: 0;
 
         }
+        @media (max-width:767px){
+            .card{
+                width: calc((100% - 40px) / 2);
+            }
+        }
         .img{
             width: 100%;
             height: 200px;
@@ -126,9 +131,14 @@
         cards.addEventListener('touchend',function(){
             let left = parseFloat(window.getComputedStyle(cards).getPropertyValue("left"));
             let width = parseFloat(window.getComputedStyle(card).getPropertyValue("width"));
-            // alert(window.getComputedStyle('.cards').left);
-            cards.style.left = left - width -20 +'px';
+            let width2 = parseFloat(window.getComputedStyle(cards).getPropertyValue("width"));
+            if(left < width2){
+                cards.style.left = left -20 +'px';
+            }else{
+                cards.style.left = left + 'px';
+            }
         });
+        alert(parseFloat(window.getComputedStyle(cards).getPropertyValue("width")))
         // alert(parseFloat(window.getComputedStyle(card).getPropertyValue("width")));
         // alert(parseFloat(window.getComputedStyle(cards).getPropertyValue("left")));
 
